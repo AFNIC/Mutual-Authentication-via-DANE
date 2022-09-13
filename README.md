@@ -11,5 +11,5 @@ Objective of this document is to help users to understand how DNS based PKI enab
 
 
 
-[LoRaWAN Background]: 
+[LoRaWAN Background]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/LoRaWAN%20Background
 
