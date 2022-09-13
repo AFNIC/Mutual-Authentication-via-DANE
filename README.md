@@ -6,3 +6,10 @@ Objective of this document is to help users to understand how DNS based PKI enab
 
 ## Structure
 
+* [LoRaWAN Bakcground]
+* [Setting up the End-Device]
+
+
+
+[LoRaWAN Bakcground]: 
+
