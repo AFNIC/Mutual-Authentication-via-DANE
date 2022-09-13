@@ -1,1 +1,8 @@
-Test
+## LoRaWAN brief background
+
+In the LPWAN category, we short-listed LoRaWAN since, compared to other IoT connectivity technologies, 
+the LoRaWAN ecosystem provides the freedom to its stakeholders to make their own choices in choosing the 
+ED manufacturers, Service providers, and applications providers. Since the radio connectivity uses a license-free spectrum,
+the freedom of choice in LoRaWAN extends to deployment options. Public LoRaWAN has nationwide coverage;  private 
+LoRaWAN focuses on specific use-cases and community networks that can be used for free by end-users. 
+
