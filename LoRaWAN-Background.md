@@ -2,8 +2,7 @@
 
 LoRaWAN is an asymmetric protocol with a star topology  as shown in the [*Figure 1*](/Figures/LoRaWAN_Key_Distribution-1.png). Data transmitted by the LoRaWAN End-Device (ED) is received by a Radio Gateway (RG), which relays it to a Network Server (NS). The NS decides on further processing the incoming data based on the ED’s unique identifier (DevEUI). The NS has multiple responsibilities like forwarding the uplink from the ED to the Application Server (AS), queuing the downlink from the AS to the ED, forwarding the ED onboarding request to the appropriate AA (Authentication & Authorization) servers, named as Join Server (JS) in LoRaWAN terminology. While the ED is connected to the RG via LoRa modulated *RF messages*, the connection between the RG, the NS and the AS is done through *IP traffic* and can be backhauled via Wi-Fi, hardwired Ethernet or Cellular connection.
 
-<figure>
+<p align="center">
   <img width="600" height="225" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/LoRaWAN_Key_Distribution-1.png?raw=true">
   <figcaption align = "center"><b>Fig.1 - LoRaWAN Topology & Key Distribution</b></figcaption>
-</figure>
-
+</p> 
