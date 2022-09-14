@@ -4,6 +4,7 @@ LoRaWAN is an asymmetric protocol with a star topology  as shown in the [*Figure
 
 <p align="center">
   <img width="600" height="225" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/LoRaWAN_Key_Distribution-1.png?raw=true">
+  <br>
   <em> Fig.1 - LoRaWAN Topology & Key Distribution</figcaption> </em>
 </p> 
 
