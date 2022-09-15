@@ -12,7 +12,7 @@ In web browsing communication, **first** (as shown in [*Figure 3*](/Figures/Web-
 
 Normally the data sent between a browser and a web server is in plain text – leaving the data vulnerable to eavesdropping. This data might include credit card numbers, login password, personal health details etc., which has to be transmitted securely. Hence, the data sent should be encrypted.
 
-For the *first* operation ((in [*Figure 3*](/Figures/Web-Without-Security.png)), securing the communication during DNS resolution could be provided by **DNS Security (DNSSEC)**. For the *second* operation, the **Transport Layer Security (TLS)** protocol comes to the rescue, allowing the client and the server to authenticate each other and negotiate an encryption algorithm and cryptographic keys before the data is exchanged. TLS ensures that data cannot be tampered with during transit since the data is encrypted. 
+For the *first* operation (in [*Figure 3*](/Figures/Web-Without-Security.png)), securing the communication during DNS resolution could be provided by **DNS Security (DNSSEC)**. For the *second* operation, the **Transport Layer Security (TLS)** protocol comes to the rescue, allowing the client and the server to authenticate each other and negotiate an encryption algorithm and cryptographic keys before the data is exchanged. TLS ensures that data cannot be tampered with during transit since the data is encrypted. 
 
 ## Public-Key Infrastructure X.509 (PKIX) - What it is and why we need it for securing Internet communication?
 
