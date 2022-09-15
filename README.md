@@ -8,9 +8,11 @@ Objective of this document is to help users to understand how DNS based PKI enab
 
 * [LoRaWAN Background]
 * [LoRaWAN Key Sharing Challenge]
+* [Key Management in the Internet]
 
 
 
 [LoRaWAN Background]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/LoRaWAN-Background.md
 [LoRaWAN Key Sharing Challenge]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/LoRaWAN-Key-Sharing-Challenge.md
+[Key Management in the Internet]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Key-Management-in-the-Internet.md
 
