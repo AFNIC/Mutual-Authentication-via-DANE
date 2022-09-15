@@ -12,3 +12,13 @@ In web browsing communication, **first** (as shown in [*Figure 3*](/Figures/Web-
 
 For the *first* operation, securing the communication during DNS resolution could be provided by **DNS Security (DNSSEC)**. For the *second* operation, the **Transport Layer Security (TLS)** protocol comes to the rescue, allowing the client and the server to authenticate each other and negotiate an encryption algorithm and cryptographic keys before the data is exchanged. TLS ensures that data cannot be tampered with during transit since the data is encrypted. 
 
+## Public-Key Infrastructure X.509 (PKIX)
+
+Encrypting and decrypting the data in the TLS protocol is done by a matching pair of cryptographic keys: **public** and **private** key. The Data encrypted by a public key can be decrypted only by the corresponding private key and vice versa, enabling secure communication with unknown users.
+
+A website (e.g., a bank) publishes its public key for anyone to download. An account holder (for example Alice) in the bank, encrypts a message using the public key and sends it to the bank. Only the bank can decrypt the message using its private key. Thus, Alice is sure that her message is accessed only by the bank and not by anyone else.
+
+On the other hand, there is a possibility that an impersonator publishes their public key posing as Alice’s bank. Alice will encrypt the message using the public key and send it to the impersonator, thinking she is communicating with her bank. The impersonator could do a man in the middle and copy the message. As the impersonator is the owner of the public and the private key, it will enable them to decrypt and read the message sent by Alice. Thus, there arises a possibility that anyone can create a public key for accessing any domain name.
+
+Hence, binding between the identity (e.g., the domain name) and the public key is necessary. The X.509 standard proposed by the ITU and ISO provides a mechanism to bind a particular public key to a specific identity. The domain holder can do this binding, and in that case, it is called a **self-signed certificate**. If the self-signed certificate is obtained from a trusted source by the application using the certificate for authentication, then it is accepted. Otherwise there is no guarantee of the certificate’s authenticity.
+
