@@ -5,7 +5,7 @@
 In web browsing communication, **first** (as shown in [*Figure 3*](/Figures/Web-Without-Security.png)), the browser obtains the IP address of a domain name using the DNS infrastructure and **secondly** it connects to the domain’s web server using the IP address via Hyper Text Transfer Protocol (HTTP) connection.
 
 <p align="center">
-  <img width="450" height="300" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/Web-Without-Security.png">
+  <img width="450" height="250" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/Web-Without-Security.png">
   <br>
   <em> Fig.3 - Unsecured Internet communication </em>
 </p>
