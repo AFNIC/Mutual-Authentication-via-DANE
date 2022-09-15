@@ -10,5 +10,5 @@ In web browsing communication, **first** (as shown in [*Figure 3*](/Figures/Web-
   <em> Fig.3 - Unsecured Internet communication </em>
 </p>
 
-For the first operation, securing the communication during DNS resolution could be provided by **DNS Security (DNSSEC)**. For the second operation, the Transport Layer Security (TLS) protocol comes to the rescue, allowing the client and the server to authenticate each other and negotiate an encryption algorithm and cryptographic keys before the data is exchanged. TLS ensures that data cannot be tampered with during transit since the data is encrypted. 
+For the *first* operation, securing the communication during DNS resolution could be provided by **DNS Security (DNSSEC)**. For the *second* operation, the **Transport Layer Security (TLS)** protocol comes to the rescue, allowing the client and the server to authenticate each other and negotiate an encryption algorithm and cryptographic keys before the data is exchanged. TLS ensures that data cannot be tampered with during transit since the data is encrypted. 
 
