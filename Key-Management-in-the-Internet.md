@@ -24,4 +24,25 @@ A website (e.g., a bank) publishes its public key for anyone to download. An acc
 
 On the other hand, there is a possibility that an impersonator publishes their public key posing as Alice’s bank. Alice will encrypt the message using the public key and send it to the impersonator, thinking she is communicating with her bank. The impersonator could do a man in the middle and copy the message. As the impersonator is the owner of the public and the private key, it will enable them to decrypt and read the message sent by Alice. Thus, there arises a possibility that anyone can create a public key for accessing any domain name.
 
-Hence, binding between the identity (e.g., the domain name) and the public key is necessary. The **X.509 standard** proposed by the ITU and ISO provides a mechanism to bind a particular public key to a specific identity. 
+Hence, binding between the identity (e.g., the domain name) and the public key is necessary. This is done by a Public Key Infrastructutre (PKI). PKI is a collection of technologies, processes and policies that provides the means to verify the authenticity of «Public Keys». 
+
+PKIs role is in Facilitating Trust over the Internet via Key management. The role includes:
+  * Create (Duration, CSR, Validation..)
+  * Store
+  * Distribute (CRL)
+  * Revoke (Pinning, Stapling)
+
+### PKI X.509 (PKIX) – the PKI for web communication
+
+In a web communication, authentication is about ensuring that users know whom they are talking to, and in most cases, that "whom," is represented by a « domain name ». To initiate a secure web communication, a user might enter the Uniform Resource Identifier (URI)  « https://www.afnic.fr » into a web browser, wherein the string before the « :// » is the protocol identifier and the string after the « :// » indicates the domain name of the server. Hypertext Transfer Protocol Secure (HTTPS) indicates that the communication between the user and the web server of the domain should be done securely using the Transport Layer Security (TLS) protocol.
+
+In order to establish a TLS connection, the browser asks the Web server to send its public key. As we have seen earlier for encryption purpose, the web server for the domain has its private key stored safely and makes its public key accessible to all. The public key  send by the web server to the browser is in the form of PKI X.509 digital certificate. The **X.509 standard** proposed by the ITU and ISO provides a mechanism to bind a particular public key to a specific identity. 
+
+For authentication purpose, the browser needs to verify that the PKIX digital certificate send to it, is actually  from the server authorized to represent the domain name.
+
+
+
+
+
+
+
