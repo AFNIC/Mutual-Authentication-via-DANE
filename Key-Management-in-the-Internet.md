@@ -1,4 +1,4 @@
-In the LoRaWAN-Key-Sharing-Challenge.md section, we discussed about the Key sharing challenge in LoRaWAN. Here in this section, we try to look at how Key management is done in the Internet and can it be reused for LoRaWAN.
+[Previoulsy](LoRaWAN-Key-Sharing-Challenge.md), we discussed about the Key sharing challenge in LoRaWAN. Here in this section, we try to look at how Key management is done in the Internet and can it be reused for LoRaWAN.
 
 ## Key Management in the Internet
 
