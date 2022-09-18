@@ -26,10 +26,13 @@ On the other hand, there is a possibility that an impersonator publishes their p
 
 Hence, binding between the identity (e.g., the domain name) and the public key is necessary. This is done by a Public Key Infrastructutre (PKI). PKI is a collection of technologies, processes and policies that provides the means to verify the authenticity of «Public Keys». 
 
-PKIs role is in Facilitating Trust over the Internet via Key management. The role includes:
-  * Create (Duration, CSR, Validation..)
-  * Store
-  * Distribute (CRL)
+### PKI's role in securing Internet communication
+
+PKIs objective is to facilitate trust over the Internet via Key management. PKI is a set of roles, policies, hardware, software and procedures needed to:
+
+  * Create (Certificate Signing Request (CSR), Duration, Validation..)
+  * Secure storage of Keys
+  * Distribute (Certificate Revocation List (CRL))
   * Revoke (Pinning, Stapling)
 
 ### PKI X.509 (PKIX) – the PKI for web communication
