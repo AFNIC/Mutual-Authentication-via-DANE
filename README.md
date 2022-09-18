@@ -10,6 +10,7 @@ Objective of this document is to help users to understand how DNS based PKI enab
 * [LoRaWAN Key Sharing Challenge]
 * [Key Management in the Internet]
 * [Challenges in using PKIX in IoT (e.g.LoRaWAN)]
+* [Proposed Solution]
 
 
 
