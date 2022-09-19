@@ -1,4 +1,4 @@
-To Test our hypothesis of using Self-Signed Certificates for the IP space, we set up different ([LoRaWANs]((https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/QuickStart.md)).  
+To Test our hypothesis of using Self-Signed Certificates for the IP space, we set up different ([LoRaWANs](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/QuickStart.md)).  
 
 ### Private CA issue
 
