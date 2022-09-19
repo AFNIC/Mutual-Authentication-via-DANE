@@ -10,4 +10,13 @@
   
   * **Label length:** CAs such as ”Let’s encrypt” provides X.509 digital certificates for free. However, it was not possible to benefit since they do not offer certificates for domain names with more than ten labels (JoinEUI has more than 16 labels). 
 
-The primary issue with the X.509 digital certificates is its size. Thus not compatible with resource constrained IoT networks. It is impossible to send a 2048 byte X.509 digital certificate over a LoRaWAN Communication which has an Maximum Transfer Unit (MTU) of 52 bytes. Due to the ED and the network constraints, The CA model for issuing the X.509 digital certificates is not operationally feasible for LoRaWAN. 
+## Pointer Section
+
+ * If you want to go back to the [Readme Page]
+ * [Next section]
+
+
+ [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ [Next section]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Proposed-Solution.md
+ 
+ 
