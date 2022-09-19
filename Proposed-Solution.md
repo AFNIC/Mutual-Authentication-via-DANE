@@ -7,3 +7,6 @@ Standardisation Organisations (SDOs) and research are working on either compress
 ### Proposed solution for the IP space
 
 For secure ED onboarding, the interface between the back-end network elements (the NS, JS and the AS) in the **IP space** (As shown in the [*Figure 1*](/Figures/LoRaWAN_Key_Distribution-1.png)) should be mutually authenticated (i.e., both the client and the server authenticate each other), as per the LoRaWAN backend specifications. Nevertheless, how mutual authentication should be done is left to the implementer’s choice and is not normative.
+
+A viable solution for mutual authentication in the IP space is to use **Self-Signed certificates**. By using self-signed certificates, there is no cost involved.
+
