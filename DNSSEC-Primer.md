@@ -5,7 +5,7 @@ In PKIX, data origin authentication is provided by the digital certificate. TLS 
 Since DNSSEC is an extension of DNS which acts upon a DNS zone, it is important to have some basic idea of a DNS zone. As shown in [Figure 6](/Figures/DNS-Hierarchy1.png), the Top Level Domain (TLD) “.fr” has two sub domains “example.fr” and “afnic.fr”. But, “.fr”, “afnic.fr” and “example.fr” are three separate zones. Each of these zones contains all the data for their specific domains. For example, the “.fr” zone contains data specific to the “.fr” do- main managed by one entity. Similarly, “example.fr” contains data specific to the “example.fr” domain, which will/could be managed by a different entity. A fictitious example of a DNS zone file for a fictitious domain “example.fr” is as follows:
 
 <p align="center">
-  <img width="250" height="250" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DNS-Hierarchy1.png">
+  <img width="350" height="225" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DNS-Hierarchy1.png">
   <br>
   <em> Fig.6 - DNS Tree example </em>
 </p>
