@@ -66,6 +66,31 @@ Certain configuration changes to the existing Chirpstack `.toml`files in the NS 
 
 
 
-Now during mutual authentication, during TLSA handshake, the X.509 digital certificate is validated as shown in the ([Figure 7](/Figures/DANE_Client_Authentication.png)). 
+Now during mutual authentication, during TLSA handshake, the X.509 digital certificate is validated as shown in the ([Figure 7](/Figures/DANE_Client_Authentication.png)). The DANE client ID based successful mutual authentication log files in the NS are below:
+
+```sh
+
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.353526026Z" level=info msg="gateway/mqtt: uplink frame received" gateway_id=00800000a0000824 uplink_id=5ba0044f-c7df-4a19-bad7-b4fd1322ca62
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.571523759Z" level=info msg="uplink: frame(s) collected" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf mtype=JoinRequest uplink_ids="[5ba0044f-c7df-4a19-bad7-b4fd1322ca62]"
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.579782666Z" level=info msg="Creating new LoRaWan client" client_name=_ns-client.ns.dance-paper.iot.rd.nic.fr tls_cert=/home/lorawan/certificates/certs/application-server/join-api/client/application-server-join-api-client-combined.pem tls_key=/home/lorawan/certificates/certs/application-server/join-api/client/application-server-join-api-client-key.pem
++ Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.580374905Z" level=info msg="Loading DANCE http client" client_name=_ns-client.ns.dance-paper.iot.rd.nic.fr
++ Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: 2022/09/12 14:15:12 Verifying TLSA for _8003._tcp.js.dance-paper.iot.rd.nic.fr
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.629769703Z" level=info msg="lorawan/backend: finished backend api call" message_type=JoinReq protocol_version=1.0 receiver_id=2b7e151628aed2a5 result_code=Success sender_id=000001 transaction_id=1401864848
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.630959978Z" level=info msg="sent uplink meta-data to network-controller" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf dev_eui=0000000000000006
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.632156931Z" level=info msg="device-queue flushed" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf dev_eui=0000000000000006
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.633455426Z" level=info msg="device-session saved" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf dev_addr=03c6c2de dev_eui=0000000000000006
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.657947724Z" level=info msg="device-activation created" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf dev_eui=0000000000000006 id=9717
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.661758119Z" level=info msg="device updated" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf dev_eui=0000000000000006
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.662631382Z" level=info msg="gateway/mqtt: publishing gateway command" command=down downlink_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf gateway_id=00800000a0000824 qos=0 topic=gateway/00800000a0000824/command/down
+Sep 12 14:15:12 lorawan-test-ns chirpstack-network-server[2638158]: time="2022-09-12T14:15:12.665339213Z" level=info msg="storage: downlink-frame saved" ctx_id=9bcc5920-8f6e-465a-a9d1-b050a68fdfbf token=10740
+```
+The DANE client ID based successful mutual authentication log files in the JS are below:
+
+```sh
++ Sep 12 14:11:11 lorawan-test-as chirpstack-application-server[2540444]: 2022/09/12 14:11:11 Verifying TLSA for _ns-client.ns.dance-paper.iot.rd.nic.fr
+Sep 12 14:11:12 lorawan-test-as chirpstack-application-server[2540444]: time="2022-09-12T14:11:12.150631673Z" level=info msg="backend/joinserver: request received" message_type=JoinReq receiver_id=2b7e151628aed2a5 sender_id=000001 transaction_id=3049576573
+Sep 12 14:11:12 lorawan-test-as chirpstack-application-server[2540444]: time="2022-09-12T14:11:12.156809536Z" level=info msg="device-keys updated" ctx_id="<nil>" dev_eui=0000000000000006
+Sep 12 14:11:12 lorawan-test-as chirpstack-application-server[2540444]: time="2022-09-12T14:11:12.156952223Z" level=info msg="backend/joinserver: sending response" dev_eui=0000000000000006 message_type=JoinAns receiver_id=000001 result_code=Success sender_id=2b7e151628aed2a5 transaction_id=3049576573
+```
 
 Thus, the issue of mutual authentication is solved wherein we could have federated Root CA's, one can use self-signed certificates solving all the challenges of using PKIX in the IP space as mentioned [here](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Challenges-in-using-PKIX-in-IoT.md) 
