@@ -8,3 +8,15 @@ Bootstrapping trust when an LoRa ED device connects to the network and starts to
   <br>
   <em> Fig.2 - Process of Key sharing between the ED manufacturer and other Stakeholders </figcaption> </em>
 </p>
+
+## Pointer Section
+
+ * If you want to go back to the [Readme Page]
+ * [Next section]
+
+
+ [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ [Next section]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/LoRaWAN-Key-Sharing-Challenge.md
+ 
+
+
