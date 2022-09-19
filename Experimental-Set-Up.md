@@ -7,7 +7,7 @@ A CA provisioning infrastructure using self-signed certificates was set up. As a
 
 ### Experimental Set up
 
-We set up an experimental set up (as shown in [Figure 3](Figures/CA_Provisioning_Architecture.png)) where Afnic emulated the Root CA role and generated intermediate certificates for two LoRaWAN - TSP (Telecom Sud Paris) and Afnic Labs.
+We set up an experimental set up (as shown in [Figure 3](Figures/CA_Provisioning_Architecture.png)) where Afnic emulated the **Root CA** role and generated intermediate certificates for two LoRaWAN - TSP (Telecom Sud Paris) and Afnic Labs.
 The intermediate certificates were generated for the NS, JS and the AS in each LoRaWAN. 
 
 
