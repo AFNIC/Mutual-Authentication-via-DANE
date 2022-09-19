@@ -12,6 +12,7 @@ Objective of this document is to help users to understand how DNS based PKI enab
 * [Challenges in using PKIX in IoT (e.g.LoRaWAN)]
 * [Proposed Solution]
 * [Experimental Set Up]
+* [Solving the private CA issue using DANE]
 
 
 
@@ -21,3 +22,4 @@ Objective of this document is to help users to understand how DNS based PKI enab
 [Challenges in using PKIX in IoT (e.g.LoRaWAN)]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Challenges-in-using-PKIX-in-IoT.md
 [Proposed Solution]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Proposed-Solution.md
 [Experimental Set Up]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Experimental-Set-Up.md
+[Solving the private CA issue using DANE]: 
