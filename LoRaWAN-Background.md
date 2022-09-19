@@ -15,8 +15,10 @@ The ED performs a Join procedure (i.e. the onboarding process) with the JS durin
 ## Pointer Section
 
 
- * In any case, If you want to go back to the [Readme Page]
+ * If you want to go back to the [Readme Page]
 
 
- [Readme Page]: https://github.com/afnic/IoTRoam-Tutorial
+ [Readme Page]: [https://github.com/AFNIC/Mutual-Authentication-via-DANE]
+ 
+
 
