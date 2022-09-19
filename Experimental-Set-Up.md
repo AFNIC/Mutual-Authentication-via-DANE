@@ -27,6 +27,10 @@ The JS associated to the ED also has prior information such as the ED’s DevEUI
 
 We are using the open source stack, [Chirpstack](https://chirpstack.io/) for the experimental LoRaWAN setup. As per the LoRaWAN Backend specifications, the DNS infrastructure is used to resolve the IP address of the different backend elements. Details of the OTAA using DNS is explained [here](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/OTAA-Using-DNS.md). How the certificates are provisioned for the different servers in the backend elements are explained [here](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#certificate-setup). Details on the Root, Intermediate and self-signed leaf certificates are explained [here](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#root-certificate). 
 
+### Mutual Authentication - Test case
+
+To narrow down, let's focus on mutual authentication between Afnic's NS and TSP JS as shown in the figure
+
 
 ### Need for Combined certficiates
 
