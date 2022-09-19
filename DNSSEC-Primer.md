@@ -28,3 +28,6 @@ A fictitious example of a DNS zone file for a fictitious domain “example.fr”
           example.fr.  IN  NS     dns2.examplehost.fr.
           example.fr.  IN  A      192.168.0.100
 ```
+To enable DNSSEC, using the Public-Key cryptographic technique, the zone administrator (for a zone such as ”example.fr”) creates a public and private key pair. The private key is accessible only to the domain owner, and all can access the public key. 
+
+DNSSEC zone administrators are recommended to create two pairs of public and private keys, wherein one is called the Zone Signing Key (ZSK), and the other pair is called the Key Signing Key (KSK). Both public keys are published in the domain’s DNS zone, and they are referred to as ”DNSKEY”. A sample of DNSKEY record in a signed DNS zone is as follows:
