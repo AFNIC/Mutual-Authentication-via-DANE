@@ -2,7 +2,7 @@ To Test our hypothesis of using Self-Signed Certificates for the IP space, we se
 
 ### Private CA issue
 
-A CA provisioning infrastructure using self-singe certificates was set up. As a self-signed certificate is a digital certificate that's not signed by a publicly trusted CA, the self-signed certificates issued by a Root CA are not Publicly trusted. Hence, they cannot not be used outside the respective root CA infrastructure.
+A CA provisioning infrastructure using self-signed certificates was set up. As a self-signed certificate is a digital certificate that's not signed by a publicly trusted CA, the self-signed certificates issued by a Root CA are not Publicly trusted. Hence, they cannot not be used outside the respective root CA infrastructure. Difference between the Root, Intermediate and leaf self-signed certificate are explained [here](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/Certificates-Tutorial.md#root-certificate)
 
 
 ### Experimental Set up
