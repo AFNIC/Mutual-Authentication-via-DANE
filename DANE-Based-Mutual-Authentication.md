@@ -23,3 +23,14 @@ The IETF DANCE WG is discussing two Internet drafts (([TLS extension for DANE Cl
           f4dcd8c4ae6162121ea9166984831b57
           b408534451fd1b9702f8de0532ecd03c )
 ```
+
+During the TLS handshake, the server requests a client certificate (via the ”Client Certificate Request” message). The server then extracts the DANE client identity, constructs the DNS query name for the corresponding TLSA record and authenticates the client’s certificate or public key. During mutual authentication, both the client and the server could be authenticated as shown in the below [Figure 7](/Figures/DANE_Client_Authentication.png).
+
+<p align="center">
+  <img width="250" height="150" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DANE_Client_Authentication.png">
+  <br>
+  <em> Fig.7 - Mutual authentication facilitated by DANE during TLS handshake </em>
+</p>
+
+DANE-based mutual authentication enables using a self- signed certificate with different Root CA’s. Thus, each institution can choose its Root CA to sign the certificates and validate dynamically based on DANE client identity.
+
