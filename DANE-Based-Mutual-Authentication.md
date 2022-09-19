@@ -27,7 +27,7 @@ The IETF DANCE WG is discussing two Internet drafts (([TLS extension for DANE Cl
 During the TLS handshake, the server requests a client certificate (via the ”Client Certificate Request” message). The server then extracts the DANE client identity, constructs the DNS query name for the corresponding TLSA record and authenticates the client’s certificate or public key. During mutual authentication, both the client and the server could be authenticated as shown in the below [Figure 7](/Figures/DANE_Client_Authentication.png).
 
 <p align="center">
-  <img width="250" height="150" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DANE_Client_Authentication.png">
+  <img width="350" height="350" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DANE_Client_Authentication.png">
   <br>
   <em> Fig.7 - Mutual authentication facilitated by DANE during TLS handshake </em>
 </p>
