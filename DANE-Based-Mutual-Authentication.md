@@ -17,14 +17,11 @@ The IETF DANCE WG is discussing two Internet drafts (([TLS extension for DANE Cl
 [19] specifies a TLS extension to convey a DANE Client Identity to a TLS server. The extension contain the client identity in the form of the DNS domain name that is expected to have a DANE TLSA record published for it as shown in the example below:
 
 ```sh
-        light_sensor._device.example.com. IN TLSA ( 312
-          0f8b48ff5fd94117f21b6550aaee89c8
-          d8adbc3f433c8e587a85a14e54667b25
-          f4dcd8c4ae6162121ea9166984831b57
-          b408534451fd1b9702f8de0532ecd03c )
+                  _3000._tcp.local.dance-tests.iot.rd.nic.fr. 1 IN   TLSA    3 1 1                              
+                                                                             6F0B92D23EB7C75F4B8A25F3B6ECC7F935F0F320E20A8C43B63D83FD95C720FB
 ```
 
-During the TLS handshake, the server requests a client certificate (via the ”Client Certificate Request” message). The server then extracts the DANE client identity, constructs the DNS query name for the corresponding TLSA record and authenticates the client’s certificate or public key. During mutual authentication, both the client and the server could be authenticated as shown in the below [Figure 7](/Figures/DANE_Client_Authentication.png).
+During the TLS handshake, the server requests a client certificate (via the ”Client Certificate Request” message). The server then extracts the DANE client identity (e.g. ```sh dance-tests.iot.rd.nic.fr ``` , constructs the DNS query name for the corresponding TLSA record (e.g; ```sh 6F0B92D23EB7C75F4B8A25F3B6ECC7F935F0F320E20A8C43B63D83FD95C720FB ```) and authenticates the client’s certificate or public key. During mutual authentication, both the client and the server could be authenticated as shown in the below [Figure 7](/Figures/DANE_Client_Authentication.png).
 
 <p align="center">
   <img width="350" height="400" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DANE_Client_Authentication.png">
