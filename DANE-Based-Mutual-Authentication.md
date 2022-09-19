@@ -16,3 +16,10 @@ The IETF [DANCE](https://datatracker.ietf.org/wg/dance/about/) (DNS Authenticati
 The IETF DANCE WG is discussing two Internet drafts (([TLS extension for DANE Client](https://www.ietf.org/archive/id/draft-huque-tls-dane-clientid-06.html) and [TLS Client Authentication via DANE TLSA records](https://datatracker.ietf.org/doc/html/draft-huque-dane-client-cert-08) based on DANE, which possibly solves the single root CA issue. For this to work, a TLS Client should have a signed DNS TLSA record (as in the [Figure](https://gitlab.rd.nic.fr/tutoriels/The-DNS-to-Reinforce-the-PKIX/-/raw/main/images/tlsa.jpg)) published in the DNS zone corresponding to its DNS name and X.509 certificate or public key.
 [19] specifies a TLS extension to convey a DANE Client Identity to a TLS server. The extension contain the client identity in the form of the DNS domain name that is expected to have a DANE TLSA record published for it as shown in the example below:
 
+```sh
+        light_sensor._device.example.com. IN TLSA ( 312
+          0f8b48ff5fd94117f21b6550aaee89c8
+          d8adbc3f433c8e587a85a14e54667b25
+          f4dcd8c4ae6162121ea9166984831b57
+          b408534451fd1b9702f8de0532ecd03c )
+```
