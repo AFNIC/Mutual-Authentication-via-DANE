@@ -29,7 +29,7 @@ We are using the open source stack, [Chirpstack](https://chirpstack.io/) for the
 
 ### Mutual Authentication - Test case
 
-To narrow down, let's focus on mutual authentication between Afnic's NS and TSP JS ([as shown in the figure 4[(https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/OTAA-Test-Case.png))
+To narrow down, let's focus on mutual authentication between Afnic's NS and TSP JS ([as shown in the figure 4[(/Figures/OTAA-Test-Case.png))
 
 <p align="center">
   <img width="750" height="450" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/OTAA-Test-Case.png">
