@@ -94,3 +94,11 @@ Sep 12 14:11:12 lorawan-test-as chirpstack-application-server[2540444]: time="20
 ```
 
 Thus, the issue of mutual authentication is solved wherein we could have federated Root CA's and use self-signed certificates solving all the challenges of using PKIX in the IP space as mentioned [here](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Challenges-in-using-PKIX-in-IoT.md) 
+
+## Pointer Section
+
+ * If you want to go back to the [Readme Page]
+ 
+
+ [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ 
