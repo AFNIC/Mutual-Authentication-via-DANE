@@ -31,3 +31,19 @@ A fictitious example of a DNS zone file for a fictitious domain “example.fr”
 To enable DNSSEC, using the Public-Key cryptographic technique, the zone administrator (for a zone such as ”example.fr”) creates a public and private key pair. The private key is accessible only to the domain owner, and all can access the public key. 
 
 DNSSEC zone administrators are recommended to create two pairs of public and private keys, wherein one is called the Zone Signing Key (ZSK), and the other pair is called the Key Signing Key (KSK). Both public keys are published in the domain’s DNS zone, and they are referred to as ”DNSKEY”. A sample of DNSKEY record in a signed DNS zone is as follows:
+
+```sh
+      ; ZSK public key
+      example.fr.  IN   DNSKEY 256 3 5                          
+        AwEAAda013Wp4CQaUBrExCIRZCYpThKqyr   
+        pAaC7rAm2Jn+VlYnzIqmwELmn0EqIsdf03
+        /e7cV8Bao94dX3xdcK+kZ6t5Of1hOLal5q
+        yn/nsKZlH247VsEE62lHQNBnxPBHIpwUL7                             
+                                     
+    ; KSK Public key
+      example.fr.  IN   DNSKEY 257 3 5           
+        A9Vze/B+hmwDJ+83cZ1JWW2G9geiboeMy
+        iuuoXB7FVavuIHJtiux+WjseJeQ4XYUGV
+        DZkPyXiJWQ/rL7azGiZB2CKPMxHyr3L5P      			
+        d1rjC50DQS45TFDvemAmvezCBs6sUtlD8
+```
