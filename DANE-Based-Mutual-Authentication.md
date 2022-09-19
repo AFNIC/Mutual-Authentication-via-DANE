@@ -10,5 +10,5 @@ Hence, a DNS infrastructure with its security extensions such as DANE with DNSSE
 
 ### How DANE enables mutual authentication for LoRaWAN using self-signed certificates?
 
-As explained earlier The issue with the certificate provisioning infrastructure using a single root CA (Fig. 8) creates a single private PKI. This approach fails from an operational feasibility perspective as number of stakeholders are not willing to be restricted to a single CA.
+As explained [earlier](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Experimental-Set-Up.md#private-ca-issue), the issue with the certificate [provisioning infrastructure](Figures/CA_Provisioning_Architecture.png) using a single root CA  creates a single private PKI. This approach fails from an operational feasibility perspective as number of stakeholders are not willing to be restricted to a single CA.
 
