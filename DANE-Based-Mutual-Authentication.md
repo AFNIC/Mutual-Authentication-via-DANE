@@ -31,3 +31,7 @@ During the TLS handshake, the server requests a client certificate (via the ”C
 
 DANE-based mutual authentication enables using a self- signed certificate with different Root CA’s. Thus, each institution can choose its Root CA to sign the certificates and validate dynamically based on DANE client identity.
 
+### Implementation
+
+In the [previous] (https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Experimental-Set-Up.md) experimental setup, there was only one Root CA (which was emulated by Afnic). Currently both [TSP and Afnic](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/CA_Provisioning_Architecture.png) could have their own respective root CA's. The only requirement is that they need to provision in their respective DNS zone, the hash of the X.509 digital certificate as TLSA resource records. 
+
