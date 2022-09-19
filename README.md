@@ -11,6 +11,7 @@ Objective of this document is to help users to understand how DNS based PKI enab
 * [Key Management in the Internet]
 * [Challenges in using PKIX in IoT (e.g.LoRaWAN)]
 * [Proposed Solution]
+* [Experimental Set Up]
 
 
 
@@ -19,3 +20,4 @@ Objective of this document is to help users to understand how DNS based PKI enab
 [Key Management in the Internet]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Key-Management-in-the-Internet.md
 [Challenges in using PKIX in IoT (e.g.LoRaWAN)]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Challenges-in-using-PKIX-in-IoT.md
 [Proposed Solution]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Proposed-Solution.md
+[Experimental Set Up]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Experimental-Set-Up.md
