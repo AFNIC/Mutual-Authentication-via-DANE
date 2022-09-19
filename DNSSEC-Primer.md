@@ -47,3 +47,6 @@ DNSSEC zone administrators are recommended to create two pairs of public and pri
           DZkPyXiJWQ/rL7azGiZB2CKPMxHyr3L5P      			
           d1rjC50DQS45TFDvemAmvezCBs6sUtlD8
 ```
+
+In a DNSSEC-signed zone, every single Resource Record set (RR set )  has one (sometimes more ) corresponding RR signature (RRSIG) record. The RRSIG is the digital signature of the RRset. The RRSIG is produced by hashing the RRset and encrypting the hash with the concerned private key.
+The private key of the ZSK is used to produce the RRSIG for all the contents of the DNS zone, except for the two DNSKEY records. It is important to note that the signed DNSSEC zone contains the RRSIG and the original unsigned data. The below example shows the contents of the “A” type RR for a DNSSEC, signed zone “example.fr”.
