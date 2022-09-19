@@ -14,18 +14,17 @@ A fictitious example of a DNS zone file for a fictitious domain “example.fr”
 
 ```sh
           ; Zone file for www.example.fr
-$TTL 1h                ; Time To Live
-example.fr IN SOA ns.example.fr. 
+          $TTL 1h                ; Time To Live
+          example.fr IN SOA ns.example.fr. 
                 host.example.fr.
-(
-           2022060304; Serial number
-           3h          ; Refresh
-           1h          ; Retry
-           1h          ; expire
-           1h          ; Negative cache 
-)
-example.fr.  IN  NS     dns1.examplehost.fr.
-example.fr.  IN  NS     dns2.examplehost.fr.
-example.fr.  IN  A      192.168.0.100
-
+          (
+              2022060304; Serial number
+              3h          ; Refresh
+              1h          ; Retry
+              1h          ; expire
+              1h          ; Negative cache 
+          )
+          example.fr.  IN  NS     dns1.examplehost.fr.
+          example.fr.  IN  NS     dns2.examplehost.fr.
+          example.fr.  IN  A      192.168.0.100
 ```
