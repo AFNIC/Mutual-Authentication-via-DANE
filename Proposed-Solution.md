@@ -10,3 +10,13 @@ For secure ED onboarding, the interface between the back-end network elements (t
 
 A viable solution for mutual authentication in the IP space is to use **Self-Signed certificates**. By using self-signed certificates, there is no cost involved.
 
+## Pointer Section
+
+ * If you want to go back to the [Readme Page]
+ * [Next section]
+
+
+ [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ [Next section]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Experimental-Set-Up.md
+ 
+
