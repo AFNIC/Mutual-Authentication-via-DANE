@@ -32,7 +32,7 @@ We are using the open source stack, [Chirpstack](https://chirpstack.io/) for the
 To narrow down, let's focus on mutual authentication between Afnic's NS and TSP JS as shown in the figure
 
 <p align="center">
-  <img width="750" height="400" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/OTAA-Test-Case.png">
+  <img width="750" height="450" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/OTAA-Test-Case.png">
   <br>
   <em> Fig.4 - OTAA between Afnic and TSP using DNS and self-signed certificates </figcaption> </em>
 </p>
