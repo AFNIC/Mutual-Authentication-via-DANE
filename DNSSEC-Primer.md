@@ -2,7 +2,7 @@ In PKIX, data origin authentication is provided by the digital certificate. TLS 
 
 ### DNS Zone
 
-Since DNSSEC is an extension of DNS which acts upon a DNS zone, it is important to have some basic idea of a DNS zone. As shown in [Figure 6](/Figures/DNS-Hierarchy1.png), the Top Level Domain (TLD) “.fr” has two sub domains “example.fr” and “afnic.fr”. But, “.fr”, “afnic.fr” and “example.fr” are three separate zones. Each of these zones contains all the data for their specific domains. For example, the “.fr” zone contains data specific to the “.fr” do- main managed by one entity. Similarly, “example.fr” contains data specific to the “example.fr” domain, which will/could be managed by a different entity. A fictitious example of a DNS zone file for a fictitious domain “example.fr” is as follows:
+Since DNSSEC is an extension of DNS which acts upon a DNS zone, it is important to have some basic idea of a DNS zone. As shown in [Figure 6](/Figures/DNS-Hierarchy1.png), the Top Level Domain (TLD) “.fr” has two sub domains “example.fr” and “afnic.fr”. But, “.fr”, “afnic.fr” and “example.fr” are three separate zones. Each of these zones contains all the data for their specific domains. For example, the “.fr” zone contains data specific to the “.fr” do- main managed by one entity. Similarly, “example.fr” contains data specific to the “example.fr” domain, which will/could be managed by a different entity. 
 
 <p align="center">
   <img width="250" height="150" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DNS-Hierarchy1.png">
@@ -10,3 +10,22 @@ Since DNSSEC is an extension of DNS which acts upon a DNS zone, it is important 
   <em> Fig.6 - DNS Tree example </em>
 </p>
 
+A fictitious example of a DNS zone file for a fictitious domain “example.fr” is as follows:
+
+```sh
+          ; Zone file for www.example.fr
+$TTL 1h                ; Time To Live
+example.fr IN SOA ns.example.fr. 
+                host.example.fr.
+(
+           2022060304; Serial number
+           3h          ; Refresh
+           1h          ; Retry
+           1h          ; expire
+           1h          ; Negative cache 
+)
+example.fr.  IN  NS     dns1.examplehost.fr.
+example.fr.  IN  NS     dns2.examplehost.fr.
+example.fr.  IN  A      192.168.0.100
+
+```
