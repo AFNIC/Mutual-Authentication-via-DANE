@@ -58,6 +58,17 @@ Similar to how a passport attested by one country’s trusted authority is accep
 </p>
 
 
+## Pointer Section
+
+ * If you want to go back to the [Readme Page]
+ * [Next section]
+
+
+ [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ [Next section]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Challenges-in-using-PKIX-in-IoT.md
+ 
+ 
+
 
 
 
