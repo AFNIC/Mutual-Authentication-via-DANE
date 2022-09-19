@@ -59,4 +59,13 @@ The advantage is that since the infrastructure uses self-signed certificates, th
   <em> Fig.5 - Certificate Validation Process using Combined trust chain </figcaption> </em>
 </p>
 
+## Pointer Section
+
+ * If you want to go back to the [Readme Page]
+ * [Next section]
+
+
+ [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ [Next section]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/DANE-Based-Mutual-Authentication.md
+ 
 
