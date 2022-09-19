@@ -21,7 +21,7 @@ The IETF DANCE WG is discussing two Internet drafts (([TLS extension for DANE Cl
                                                                              6F0B92D23EB7C75F4B8A25F3B6ECC7F935F0F320E20A8C43B63D83FD95C720FB
 ```
 
-During the TLS handshake, the server requests a client certificate (via the ”Client Certificate Request” message). The server then extracts the DANE client identity (e.g. ```sh dance-tests.iot.rd.nic.fr ``` , constructs the DNS query name for the corresponding TLSA record (e.g; ```sh 6F0B92D23EB7C75F4B8A25F3B6ECC7F935F0F320E20A8C43B63D83FD95C720FB ```) and authenticates the client’s certificate or public key. During mutual authentication, both the client and the server could be authenticated as shown in the below [Figure 7](/Figures/DANE_Client_Authentication.png).
+During the TLS handshake, the server requests a client certificate (via the ”Client Certificate Request” message). The server then extracts the DANE client identity (e.g. ```dance-tests.iot.rd.nic.fr ``` , constructs the DNS query name for the corresponding TLSA record (e.g; ``` 6F0B92D23EB7C75F4B8A25F3B6ECC7F935F0F320E20A8C43B63D83FD95C720FB ```) and authenticates the client’s certificate or public key. During mutual authentication, both the client and the server could be authenticated as shown in the below [Figure 7](/Figures/DANE_Client_Authentication.png).
 
 <p align="center">
   <img width="350" height="400" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/DANE_Client_Authentication.png">
