@@ -16,9 +16,11 @@ The ED performs a Join procedure (i.e. the onboarding process) with the JS durin
 
 
  * If you want to go back to the [Readme Page]
+ * [Next section]
 
 
  [Readme Page]: https://github.com/AFNIC/Mutual-Authentication-via-DANE
+ [Next section]: https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/LoRaWAN-Key-Sharing-Challenge.md
  
 
 
