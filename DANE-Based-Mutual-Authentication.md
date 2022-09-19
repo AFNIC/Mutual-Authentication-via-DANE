@@ -36,6 +36,36 @@ DANE-based mutual authentication enables using a self- signed certificate with d
 
 In the [previous](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Experimental-Set-Up.md) experimental setup, there was only one Root CA (which was emulated by Afnic). Currently both [TSP and Afnic](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/CA_Provisioning_Architecture.png) could have their own respective root CA's. The only requirement is that they need to provision in their respective DNS zone, the hash of the X.509 digital certificate as TLSA resource records. 
 
-The two IETF drafts (([TLS extension for DANE Client](https://www.ietf.org/archive/id/draft-huque-tls-dane-clientid-06.html) and [TLS Client Authentication via DANE TLSA records](https://datatracker.ietf.org/doc/html/draft-huque-dane-client-cert-08)) are [implemented](https://gitlab.rd.nic.fr/dance/deployment). Now during mutual authentication, during TLSA handshake, the X.509 digital certificate is validated as shown in the ([Figure 7](/Figures/DANE_Client_Authentication.png)). 
+The two IETF drafts ([TLS extension for DANE Client](https://www.ietf.org/archive/id/draft-huque-tls-dane-clientid-06.html) and [TLS Client Authentication via DANE TLSA records](https://datatracker.ietf.org/doc/html/draft-huque-dane-client-cert-08)) are [implemented](https://gitlab.rd.nic.fr/dance/deployment). 
+
+Certain configuration changes to the existing Chirpstack `.toml`files in the NS and JS are modified as follows:
+
+```sh
+            * network server
+
+            [join_server]
+            resolv_conf = "/etc/chirpstack-network-server/resolv.conf"
+
+            [join_server.default]
+            server="https://js.dance-paper.iot.rd.nic.fr:8003"
+            tls_cert="/home/lorawan/certificates/certs/application-server/join-api/client/application-server-join-api-client-combined.pem"
+            tls_key="/home/lorawan/certificates/certs/application-server/join-api/client/application-server-join-api-client-key.pem"
+            dane_client_name = "_ns-client.ns.dance-paper.iot.rd.nic.fr"
+```
+
+```sh
+            * join server
+
+            [join_server]
+            bind="0.0.0.0:8003"
+            tls_cert="/home/lorawan/certificates/certs/application-server/join-api/server/application-server-join-api-server-combined.pem"
+            tls_key="/home/lorawan/certificates/certs/application-server/join-api/server/application-server-join-api-server-key.pem"
+            enable_dane = true
+            resolv_conf = "/etc/chirpstack-application-server/resolv.conf"
+```
+
+
+
+Now during mutual authentication, during TLSA handshake, the X.509 digital certificate is validated as shown in the ([Figure 7](/Figures/DANE_Client_Authentication.png)). 
 
 Thus, the issue of mutual authentication is solved wherein we could have federated Root CA's, one can use self-signed certificates solving all the challenges of using PKIX in the IP space as mentioned [here](https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Challenges-in-using-PKIX-in-IoT.md) 
