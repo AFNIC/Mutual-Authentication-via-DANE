@@ -1,1 +1,1 @@
-Test
+To Test our hypothesis of using Self-Signed Certificates for the IP space, A CA provisioning infrastructure (Fig. 8) was set up, where Afnic emulated the Root CA role and generated intermediate certificates for two LoRaWAN - TSP (Telecom Sud Paris) and Afnic Labs. Complete details on setting up the infrastructure is provided in the [Quick Start guide](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/QuickStart.md)
