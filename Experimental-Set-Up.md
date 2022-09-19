@@ -25,6 +25,8 @@ The ED performs a Join procedure with the JS during OTAA by sending the Join Req
 
 The JS associated to the ED also has prior information such as the ED’s DevEUI, the cryptographic keys: NwkKey and AppKey required for generating session keys to secure the communication between the ED and the NS and AS. These are the pre-shared information between the ED and the AA server in the Internet. As mentioned earlier, for this experimental set up we are focussing on mutual authentication in the IP space. Hence the ED association to the backend elements will be done with the AES PSKs.
 
+We are using the open source stack, [Chirpstack](https://chirpstack.io/) for the experimental LoRaWAN setup. As per the LoRaWAN Backend specifications, the DNS infrastructure is used to resolve the IP address of the different backend elements. Details of the OTAA using DNS is explained [here](https://github.com/AFNIC/IoTRoam-Tutorial/blob/master/OTAA-Using-DNS.md)
+
 
 ### Need for Combined certficiates
 
