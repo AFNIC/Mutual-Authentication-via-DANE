@@ -43,3 +43,11 @@ To narrow down, let's focus on mutual authentication between Afnic's NS and TSP 
 Focussing on the mutual authentication between Afnic's NS and TSP JS, we tested the validation using self-signed certificates. Since the intermediate certificates (which is used to generate the leaf self-signed certificates) for both the LoRaWANs were different, TLS handshake were emitting error messages. 
 
 We identified that combining the intermediate and the server leaf certificate (a combined trust chain - Fig. 9) during a TLS handshake could bypass the need for having a certificate store with all intermediate certificates. The validating server needs to store only the root CA certificate. The certificate validation process is done by sending the combined trust chain to the server’s IP address. On receiving the combined trust chain, the server first verifies the leaf certificate in the combined trust chain. When the leaf cer- tificate is unknown, it checks the following certificate in the chain, the intermediate certificate. Since the root CA signs
+
+<p align="center">
+  <img width="450" height="250" src="https://github.com/AFNIC/Mutual-Authentication-via-DANE/blob/main/Figures/CA_Validation_Architecture.png">
+  <br>
+  <em> Fig.5 - Certificate Validation Process using Combined trust chain </figcaption> </em>
+</p>
+
+
