@@ -40,7 +40,7 @@ To narrow down, let's focus on mutual authentication between Afnic's NS and TSP 
 
 ### Need for Combined certficiates
 
-Focussing on the mutual authentication between Afnic's NS and TSP JS, we tested the validation using self-signed certificates. Since the intermediate certificates (which is used to generate the leaf self-signed certificates) for both the LoRaWANs were different, TLS handshake were emitting error messages. 
+Focussing on the mutual authentication between Afnic's NS and TSP JS, we tested the validation using self-signed certificates. Since the intermediate certificates (which is used to generate the leaf self-signed certificates) for both the LoRaWANs were different, TLS handshake were emitting error messages as follows:
 
 ```sh
 Sep 12 14:24:57 lorawan-test-ns chirpstack-network-server[2638245]: time="2022-09-12T14:24:57.761331841Z" level=info msg="Creating new LoRaWan client" client_name= tls_cert=/home/lorawan/certificates/certs/application-server/join-api/client/application-server-join-api-client-combined.pem tls_key=/home/lorawan/certificates/certs/application-server/join-api/client/application-server-join-api-client-key.pem
